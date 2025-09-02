@@ -128,11 +128,9 @@ clockRef.on("value", (snapshot) => {
     } else if (data.action === "resetting") {
         if (!isHost) {
             statusElement.textContent = "Clock will reset in 3 seconds...";
-            triggerCountdown(3, () => {
-                clearInterval(timerInterval);
-                clockElement.textContent = "00:00:00";
-                statusElement.textContent = "Clock reset.";
-            });
+            clearInterval(timerInterval);
+            clockElement.textContent = "00:00:00";
+            statusElement.textContent = "Clock reset.";
         }
     } else if (data.action === "reset") {
         if (!isHost) {
