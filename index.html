@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronized Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Synchronized Clock</h1>
+        <div id="clock" class="clock">00:00:00</div>
+        <div id="status" class="status">Waiting for host to start...</div>
+        <button id="startBtn" class="btn">Start Clock</button>
+        <button id="stopBtn" class="btn">Stop Clock</button>
+        <button id="resetBtn" class="btn">Reset Clock</button>
+    </div>
+    <audio id="alarmSound" src="alarmSound.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
